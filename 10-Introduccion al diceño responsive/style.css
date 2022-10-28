@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+}
+.aside {
+  padding: 20px;
+  background: yellowgreen;
+}
+.item-link {
+    text-decoration: none;
+}
+
+.list-item{
+    list-style: none;
+    padding: 10px 0;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  flex-grow: 1;
+  background: lightsalmon;
+}
+
+@media (max-width: 640px) {
+  .container {
+    flex-direction: column;
+  }
+  .main {
+    height: 50px;
+  }
+  .aside {
+    order: 1;
+  }
+  .aside > .list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
